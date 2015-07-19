@@ -2,8 +2,8 @@ function ListNode(val) {
       this.val = val;
       this.next = null;
  }
-
-module.exports.createLinkedList = function(arr) {
+ 
+function createLinkedList(arr) {
 	var i, len;
 	var head;
 	var cur;
@@ -20,3 +20,9 @@ module.exports.createLinkedList = function(arr) {
 	}
 	return head;
 }
+
+module.exports = {
+	ListNode: ListNode,
+	createLinkedList: createLinkedList
+}
+
