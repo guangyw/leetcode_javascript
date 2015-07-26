@@ -37,8 +37,10 @@ function UnSerializeTree(arr) {
 		}
 	}
 	for (i = 0; i < treeNodeMap.length; i++) {
-		treeNodeMap[i].left = treeNodeMap[2 * i + 1];
-		treeNodeMap[i].right = treeNodeMap[2 * i + 2];
+		if (treeNodeMap[i] !== null) {
+			treeNodeMap[i].left = treeNodeMap[2 * i + 1];
+			treeNodeMap[i].right = treeNodeMap[2 * i + 2];
+		}
 	}
 	return treeNodeMap[0];
 }
