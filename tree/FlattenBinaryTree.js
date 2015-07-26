@@ -11,7 +11,6 @@
  * @return {void} Do not return anything, modify root in-place instead.
  */
 var flatten = function(root) {
-    var right;
     var stack = [];
     var cur = root;
     var pre;
