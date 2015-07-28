@@ -23,6 +23,20 @@ var preorderTraversal = function(root) {
     }
 };
 
+function preorderIterativeI(root) {
+    var stack = [];
+    var node = root;
+    var res = [];
+    while (stack.length > 0 || node) {
+        if (node) {
+            res.push(node);
+            if (node.right) stack.push(node.right);
+            node = node.left;
+        } else {
+            node - stack.pop();
+        }
+    }
+}
 
 function preorderIterative(root) {
     var res = [];
